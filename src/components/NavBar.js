@@ -6,13 +6,13 @@ const NavBar = () => {
       <div className="container-fluid">
         <div className="navbar-header">
           <a href="#" class="navbar-brand">Fleddit</a>
-          <div>
-            <ul className="nav navbar-nav">
-              <li>All Posts</li>
-              <li>New Post</li>
-              <li>About</li>
-            </ul>
-          </div>
+        </div>
+        <div className="mr-auto">
+          <ul className="nav navbar-nav">
+            <li>All Posts</li>
+            <li>New Post</li>
+            <li>About</li>
+          </ul>
         </div>
       </div>
     </nav>
