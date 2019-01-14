@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-export default class PostsIndexController extends Component {
+export default class PostsIndexContainer extends Component {
 
   render() {
     return(
       <div>
-        <h2>This is the PostsIndexController</h2>
+        <h2>This is the PostsIndexContainer</h2>
       </div>
     )
   }

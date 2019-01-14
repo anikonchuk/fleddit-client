@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/NavigationBar'
 import Welcome from './components/Welcome'
 import About from './components/About'
+import PostsIndexContainer from './containers/PostsIndexContainer'
 import { Switch, Route } from 'react-router-dom'
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Welcome}/>
           <Route exact path='/about' component={About}/>
+          <Route exact path='/posts' component={PostsIndexContainer}/>
         </Switch>
       </div>
     );
