@@ -2,7 +2,7 @@ import React from 'react';
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-default">
+    <nav className="navbar navbar-default navbar-gray">
       <div className="container-fluid">
         <div className="navbar-header">
           <a href="#" class="navbar-brand">Fleddit</a>
