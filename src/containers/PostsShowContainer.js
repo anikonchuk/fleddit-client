@@ -12,8 +12,8 @@ class PostsShowContainer extends Component {
   render() {
     return(
       <div>
-      {this.props.loading ? <h3>Loading Post</h3> : null}
-      {this.props.targetPost ? <PostCard targetPost={this.props.targetPost}/> : null}
+        {this.props.loading ? <h3>Loading Post</h3> : null}
+        <PostCard targetPost={this.props.targetPost}/>
       </div>
     )
   }
