@@ -8,7 +8,7 @@ export default function postsReducer (
     case 'START_ADDING_ALL_POSTS':
       return {...state, loading: true}
     case 'ADD_ALL_POSTS':
-      return {loading:false, posts: action.payload}
+      return {loading:false, posts: action.posts}
     default:
       return state;
   }
