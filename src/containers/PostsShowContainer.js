@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class PostsShowContainer extends Component {
+
+
   render() {
     return(
       <div>
@@ -10,4 +13,10 @@ class PostsShowContainer extends Component {
   }
 }
 
-export default PostsShowContainer
+const mapStateToProps = state => {
+  return {
+    posts: state.posts.posts
+  }
+}
+
+export default connect(mapStateToProps)(PostsShowContainer)
