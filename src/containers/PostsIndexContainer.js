@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PostPreview from '../components/PostPreview'
 
 export default class PostsIndexContainer extends Component {
 
