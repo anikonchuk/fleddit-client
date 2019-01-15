@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchTargetPost } from '../actions/postsActions'
+import PostCard from '../components/PostCard'
 
 class PostsShowContainer extends Component {
 
