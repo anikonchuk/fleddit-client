@@ -1,14 +1,15 @@
 export default function postsReducer (
   state={
     loading: false,
-    posts:[]
+    posts:[],
+    targetPost: null
   }, action
 ) {
   switch(action.type) {
-    case 'START_ADDING_ALL_POSTS':
+    case 'START_ADDING_POSTS':
       return {...state, loading: true}
     case 'ADD_ALL_POSTS':
-      return {loading:false, posts: action.posts}
+      return {...state, loading:false, posts: action.posts}
     default:
       return state;
   }
