@@ -12,7 +12,7 @@ class PostsShowContainer extends Component {
   render() {
     return(
       <div>
-        <h2>This is the PostsShowContainer</h2>
+      {this.props.targetPost ? <PostCard targetPost={this.props.targetPost}/> : null}
       </div>
     )
   }
