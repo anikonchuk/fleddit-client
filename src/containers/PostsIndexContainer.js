@@ -9,10 +9,16 @@ class PostsIndexContainer extends Component {
     this.props.fetchAllPosts();
   }
 
+  displayPostPreviews = () => {
+    return this.props.posts.map(post => <PostPreview key={post.id} post={post}/>)
+  }
+
   render() {
     return(
       <div>
-        <h2>This is the PostsIndexContainer</h2>
+        <h2>All Posts</h2>
+        { this.props.loading ? <div><h3>Loading</h3></div> : null }
+        { this.displayPostPreviews() }
       </div>
     )
   }
