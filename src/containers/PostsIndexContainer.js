@@ -5,6 +5,10 @@ import { fetchAllPosts } from '../actions/postsActions';
 
 class PostsIndexContainer extends Component {
 
+  componentDidMount() {
+    this.props.fetchAllPosts();
+  }
+
   render() {
     return(
       <div>
