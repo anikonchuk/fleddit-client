@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchTargetPost } from '../actions/postsActions'
 import PostCard from '../components/PostCard'
+import CommentsContainer from './CommentsContainer'
 
 class PostsShowContainer extends Component {
 
@@ -14,6 +15,7 @@ class PostsShowContainer extends Component {
       <div>
         {this.props.loading ? <h3>Loading Post</h3> : null}
         <PostCard targetPost={this.props.targetPost}/>
+        <CommentsContainer targetPost={this.props.targetPost}/>
       </div>
     )
   }
