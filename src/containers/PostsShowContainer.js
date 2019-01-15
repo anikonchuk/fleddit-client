@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { fetchTargetPost } from '../actions/postsActions'
 
 class PostsShowContainer extends Component {
 
+  componentDidMount() {
+    this.props.fetchTargetPost(this.props.match.params.postId)
+  }
 
   render() {
     return(
@@ -15,8 +19,17 @@ class PostsShowContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    posts: state.posts.posts
+    targetPost: state.posts.targetPost,
+    loading: state.posts.loading
   }
 }
 
-export default connect(mapStateToProps)(PostsShowContainer)
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchTargetPost: (postId) => {
+      dispatch(fetchTargetPost(postId))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PostsShowContainer)
