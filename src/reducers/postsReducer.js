@@ -1,10 +1,15 @@
-export default function postsReducer (
-  state={
-    loading: false,
-    posts:[],
-    targetPost: null
-  }, action
-) {
+const initialState = {
+  loading: false,
+  posts: [],
+  targetPost: {
+    id: "",
+    title: "",
+    author: "",
+    content: "",
+  }
+}
+
+export default function postsReducer (state = initialState, action) {
   switch(action.type) {
     case 'START_ADDING_POSTS':
       return {...state, loading: true}
