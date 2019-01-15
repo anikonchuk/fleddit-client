@@ -3,5 +3,13 @@
 }
 
 .navbar-gray {
-  background-color: #D3D3D3;
+  background-color: #F2F2F2;
+}
+
+.post-preview {
+  width: 30%;
+  margin: 2.5%;
+  background-color: #F2F2F2;
+  float: left;
+  padding: 2%;
 }
