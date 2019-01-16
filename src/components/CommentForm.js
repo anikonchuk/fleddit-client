@@ -16,6 +16,15 @@ class CommentForm extends Component {
     })
   }
 
+  handleOnSubmit = (event) => {
+    event.preventDefault();
+    this.props.createComment(this.state);
+    this.setState({
+      author: "",
+      content: ""
+    })
+  }
+
   render() {
     return(
       <div className="comment-form">
