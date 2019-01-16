@@ -11,7 +11,6 @@ const NavigationBar = () => {
           <div>
             <ul className="nav navbar-nav">
               <li><Link to='/posts'>All Posts</Link></li>
-              <li><Link to='/posts/new'>New Post</Link></li>
               <li><Link to='/about'>About</Link></li>
             </ul>
           </div>
