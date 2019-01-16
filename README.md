@@ -1,4 +1,3 @@
-This project was bootstrapped with
 # Fleddit-Client
 
 Welcome to Fleddit, a blog website where you can share your ideas and comments! The Fleddit client-side website was built using React and Redux, and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
