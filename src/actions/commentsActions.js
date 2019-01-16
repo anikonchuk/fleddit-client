@@ -26,6 +26,6 @@ export function createComment(comment) {
 function addComment(comment){
   return{
     type: 'CREATE_COMMENT_SUCCESS',
-    post
+    comment
   }
 }
