@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { createComment } from '../actions/commentsActions';
 
 class CommentForm extends Component {
+
+  state = {
+    post_id: this.props.targetPost.id,
+    author: "",
+    content: ""
+  }
+
   render() {
     return(
       <div>
@@ -9,3 +17,13 @@ class CommentForm extends Component {
     )
   }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    createComment: (comment) => {
+      dispatch(createComment(comment))
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CommentForm)
