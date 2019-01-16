@@ -50,4 +50,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapDispatchToProps)(PostForm)
+export default connect(null, mapDispatchToProps)(PostForm)
