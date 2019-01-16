@@ -15,11 +15,18 @@ class PostsIndexContainer extends Component {
 
   render() {
     return(
-      <div>
-        <h2>All Posts</h2>
-        { this.props.loading ? <div><h3>Loading</h3></div> : null }
-        { this.displayPostPreviews() }
-      </div>
+      <React.Fragment>
+        <div className="row">
+          <div className="col-8">
+            <h2>All Posts</h2>
+            { this.props.loading ? <div><h3>Loading</h3></div> : null }
+            { this.displayPostPreviews() }
+          </div>
+          <div className="col-4">
+            <h2>Create a New Post</h2>
+          </div>
+        </div>
+      </React.Fragment>
     )
   }
 }
