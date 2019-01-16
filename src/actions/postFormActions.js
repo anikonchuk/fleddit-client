@@ -4,3 +4,9 @@ export function updatePostFormData(postFormData) {
     postFormData
   }
 }
+
+export function resetPostForm() {
+  return {
+    type: 'RESET_POST_FORM'
+  }
+}

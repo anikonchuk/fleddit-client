@@ -10,7 +10,6 @@ class PostForm extends Component {
   }
 
   render() {
-    console.log(this.props.postFormData)
     return(
       <div className="post-form">
         <p><em>Title, author, and content are required.</em></p>

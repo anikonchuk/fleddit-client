@@ -17,6 +17,8 @@ export default function postsReducer (state = initialState, action) {
       return {...state, loading:false, posts: action.posts}
     case 'ADD_TARGET_POST':
       return {...state, loading:false, targetPost: action.post}
+    case 'CREATE_POST_SUCCESS':
+      return {...state, posts: [...state.posts, action.post]}
     default:
       return state;
   }
