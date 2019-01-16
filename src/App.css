@@ -44,3 +44,8 @@
 img {
   max-width: 80%;
 }
+
+.App .post-form {
+  padding: 2%;
+  text-align: left;
+}
