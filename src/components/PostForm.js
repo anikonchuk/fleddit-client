@@ -20,6 +20,12 @@ class PostForm extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     this.props.createPost(this.state);
+    this.setState({
+      title: "",
+      author: "",
+      img_url: "",
+      content: ""
+    })
   }
 
   render() {
