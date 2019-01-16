@@ -1,5 +1,3 @@
-import { resetPostForm } from './postFormActions'
-
 export function fetchAllPosts() {
   return(dispatch) => {
     dispatch({type: 'START_ADDING_POSTS'});
@@ -30,7 +28,6 @@ export function createPost(post) {
       .then(response => response.json())
       .then(post => {
         dispatch(addPost(post));
-        dispatch(resetPostForm());
       })
   }
 }
