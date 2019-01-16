@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PostPreview from '../components/PostPreview';
+import PostForm from '../components/PostForm';
 import { connect } from 'react-redux';
 import { fetchAllPosts } from '../actions/postsActions';
 
@@ -15,18 +16,17 @@ class PostsIndexContainer extends Component {
 
   render() {
     return(
-      <React.Fragment>
-        <div className="row">
-          <div className="col-8">
-            <h2>All Posts</h2>
-            { this.props.loading ? <div><h3>Loading</h3></div> : null }
-            { this.displayPostPreviews() }
-          </div>
-          <div className="col-4">
-            <h2>Create a New Post</h2>
-          </div>
+      <div className="row">
+        <div className="col-8">
+          <h2>All Posts</h2>
+          { this.props.loading ? <div><h3>Loading</h3></div> : null }
+          { this.displayPostPreviews() }
         </div>
-      </React.Fragment>
+        <div className="col-4">
+          <h2>Create a New Post</h2>
+          <PostForm />
+        </div>
+      </div>
     )
   }
 }
