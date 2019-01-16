@@ -33,8 +33,14 @@ export function createPost(post) {
 }
 
 function addPost(post){
-  return{
+  return {
     type: 'CREATE_POST_SUCCESS',
     post
+  }
+}
+
+export function removeTargetPost() {
+  return {
+    type: 'CLEAR_TARGET_POST'
   }
 }
