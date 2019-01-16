@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchTargetPost } from '../actions/postsActions'
+import { fetchTargetPost, removeTargetPost } from '../actions/postsActions'
 import PostCard from '../components/PostCard'
 import CommentsContainer from './CommentsContainer'
 
@@ -8,6 +8,10 @@ class PostsShowContainer extends Component {
 
   componentDidMount() {
     this.props.fetchTargetPost(this.props.match.params.postId)
+  }
+
+  componentWillUnmount() {
+    this.props.removeTargetPost()
   }
 
   render() {
@@ -32,6 +36,9 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchTargetPost: (postId) => {
       dispatch(fetchTargetPost(postId))
+    },
+    removeTargetPost: () => {
+      dispatch(removeTargetPost())
     }
   }
 }
