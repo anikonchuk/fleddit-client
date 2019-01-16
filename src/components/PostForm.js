@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updatePostFormData } from '../actions/postFormActions'
+import { createPost } from '../actions/postsActions'
 
 class PostForm extends Component {
 
@@ -9,11 +10,16 @@ class PostForm extends Component {
     this.props.updatePostFormData(currentPostFormData)
   }
 
+  handleOnSubmit = event => {
+    event.preventDefault();
+    this.props.createPost(this.props.postFormData);
+  }
+
   render() {
     return(
       <div className="post-form">
         <p><em>Title, author, and content are required.</em></p>
-        <form>
+        <form onSubmit={this.handleOnSubmit}>
           <label htmlFor="title">Title</label><br/>
           <input type="text" id="title" name="title" value={this.props.postFormData.title} onChange={this.handleChange} required /><br/>
           <label htmlFor="author">Author</label><br/>
@@ -39,6 +45,9 @@ const mapDispatchToProps = dispatch => {
   return {
     updatePostFormData: (currentPostFormData) => {
       dispatch(updatePostFormData(currentPostFormData))
+    },
+    createPost: (post) => {
+      dispatch(createPost(post))
     }
   }
 }
