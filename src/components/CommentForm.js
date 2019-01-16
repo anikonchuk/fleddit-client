@@ -5,7 +5,7 @@ import { createComment } from '../actions/commentsActions';
 class CommentForm extends Component {
 
   state = {
-    post_id: this.props.targetPost.id,
+    post_id: this.props.targetPostId,
     author: "",
     content: ""
   }

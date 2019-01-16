@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAllComments } from '../actions/commentsActions'
 import Comment from '../components/Comment'
+import CommentForm from '../components/CommentForm'
 
 class CommentsContainer extends Component {
 
@@ -19,6 +20,7 @@ class CommentsContainer extends Component {
         <h3><em>Comments</em></h3>
         {this.props.loading ? <h3>Loading Comments</h3> : null}
         {this.renderComments()}
+        <CommentForm targetPostId={this.props.targetPost.id}/>
       </div>
     )
   }
