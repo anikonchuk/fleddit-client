@@ -5,7 +5,6 @@ import { createComment } from '../actions/commentsActions';
 class CommentForm extends Component {
 
   state = {
-    post_id: this.props.targetPostId,
     author: "",
     content: ""
   }
@@ -18,7 +17,8 @@ class CommentForm extends Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault();
-    this.props.createComment(this.state);
+    const commentData = Object.assign({}, this.state, {post_id: this.props.targetPostId})
+    this.props.createComment(commentData);
     this.setState({
       author: "",
       content: ""
@@ -26,6 +26,7 @@ class CommentForm extends Component {
   }
 
   render() {
+    console.log('props:', this.props)
     return(
       <div className="comment-form">
         <h3><em>Add a New Comment</em></h3>

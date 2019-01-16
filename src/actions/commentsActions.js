@@ -17,7 +17,7 @@ export function createComment(comment) {
       body: JSON.stringify({ comment: comment })
     })
       .then(response => response.json())
-      .then(post => {
+      .then(comment => {
         dispatch(addComment(comment));
       })
   }
