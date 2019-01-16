@@ -10,9 +10,24 @@ class CommentForm extends Component {
     content: ""
   }
 
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
   render() {
     return(
-      <div>
+      <div className="comment-form">
+        <h3><em>Add a New Comment</em></h3>
+        <p><em>Author and content are required</em></p>
+        <form onSubmit={this.handleOnSubmit}>
+          <label htmlFor="author">Author</label><br/>
+          <input type="text" id="author" name="author" value={this.state.author} onChange={this.handleChange} required /><br/>
+          <label htmlFor="content">Content</label><br/>
+          <textarea id="content" name="content" value={this.state.content} onChange={this.handleChange} required ></textarea><br/>
+          <input type="submit" className="btn btn-primary"/>
+        </form>
       </div>
     )
   }

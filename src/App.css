@@ -49,3 +49,7 @@ img {
   padding: 2%;
   text-align: left;
 }
+
+.comment-form form {
+  text-align: left;
+}
