@@ -1,5 +1,5 @@
 export function fetchAllPosts() {
-  return(dispatch) => {
+  return (dispatch) => {
     dispatch({type: 'START_ADDING_POSTS'});
     return fetch('http://localhost:3005/api/posts')
       .then(response => response.json())
@@ -8,7 +8,7 @@ export function fetchAllPosts() {
 }
 
 export function fetchTargetPost(postId) {
-  return(dispatch) => {
+  return (dispatch) => {
     dispatch({type: 'START_ADDING_POSTS'});
     return fetch(`http://localhost:3005/api/posts/${postId}`)
       .then(response => response.json())
