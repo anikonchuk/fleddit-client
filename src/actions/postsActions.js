@@ -25,10 +25,18 @@ export function createPost(post) {
       },
       body: JSON.stringify({ post: post })
     })
+      // .then(res => {
+      //   if (res.ok) {
+      //     return res
+      //   }
+      //
+      //   return throw Error(res)
+      // })
       .then(response => response.json())
       .then(post => {
         dispatch(addPost(post));
       })
+      //.catch(alert("Something went wrong. Please try again"))
   }
 }
 
