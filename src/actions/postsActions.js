@@ -1,7 +1,7 @@
 export function fetchAllPosts() {
   return (dispatch) => {
     dispatch({type: 'START_ADDING_POSTS'});
-    return fetch('http://localhost:3005/api/posts')
+    return fetch('https://fleddit-api.herokuapp.com/api/posts')
       .then(response => response.json())
       .then(posts => dispatch({type: 'ADD_ALL_POSTS', posts}));
   };
@@ -10,7 +10,7 @@ export function fetchAllPosts() {
 export function fetchTargetPost(postId) {
   return (dispatch) => {
     dispatch({type: 'START_ADDING_POSTS'});
-    return fetch(`http://localhost:3005/api/posts/${postId}`)
+    return fetch(`https://fleddit-api.herokuapp.com/api/posts/${postId}`)
       .then(response => response.json())
       .then(post => dispatch({type: 'ADD_TARGET_POST', post}))
   }
@@ -18,7 +18,7 @@ export function fetchTargetPost(postId) {
 
 export function createPost(post) {
   return (dispatch) => {
-    return fetch('http://localhost:3005/api/posts', {
+    return fetch('https://fleddit-api.herokuapp.com/api/posts', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

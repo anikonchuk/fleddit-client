@@ -1,7 +1,7 @@
 export function fetchAllComments() {
   return (dispatch) => {
     dispatch({type: 'START_ADDING_COMMENTS'});
-    return fetch('http://localhost:3005/api/comments')
+    return fetch('https://fleddit-api.herokuapp.com/api/comments')
       .then(response => response.json())
       .then(comments => dispatch({type: 'ADD_ALL_COMMENTS', comments}));
   };
@@ -9,7 +9,7 @@ export function fetchAllComments() {
 
 export function createComment(comment) {
   return (dispatch) => {
-    return fetch('http://localhost:3005/api/comments', {
+    return fetch('https://fleddit-api.herokuapp.com/api/comments', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
