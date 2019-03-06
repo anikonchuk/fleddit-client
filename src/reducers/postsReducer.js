@@ -5,7 +5,9 @@ const initialState = {
     id: "",
     title: "",
     author: "",
-    content: ""
+    content: "",
+    img_url: "",
+    likes: 0
   }
 }
 

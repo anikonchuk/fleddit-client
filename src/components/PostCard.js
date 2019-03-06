@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 
 class PostCard extends Component {
 
+  state = {
+    likes: 0
+  }
+
+  componentDidMount() {
+    this.setState({
+      likes: this.props.targetPost.likes
+    })
+  }
+
   render() {
     return(
       <div className="post-card">
@@ -10,7 +20,7 @@ class PostCard extends Component {
         <p>{this.props.targetPost.content}</p>
         { this.props.targetPost.img_url ? <img src={this.props.targetPost.img_url} alt={this.props.targetPost.title}/> : null }
         <div className="post-likes">
-          <p><em>This post has {this.props.targetPost.likes} likes</em></p>
+          <p><em>This post has {this.state.likes} likes.</em></p>
         </div>
       </div>
     )
