@@ -4,8 +4,17 @@ import { updateLikes } from '../actions/postsActions'
 
 class PostCard extends Component {
 
-  state = {
-    likes: this.props.targetPost.likes
+  constructor(props) {
+    super(props)
+    this.state = {
+      likes: props.targetPost.likes
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.targetPost.likes !== this.props.targetPost.likes) {
+      this.setState({likes: nextProps.targetPost.likes})
+    }
   }
 
   handleClick = (event) => {
