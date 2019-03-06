@@ -48,7 +48,7 @@ export function updateLikes(id, likes) {
       likes: likes
     }
     return fetch(`${BASE_URL}/api/posts/${id}`, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         'Content-Type': 'application/json'
       },

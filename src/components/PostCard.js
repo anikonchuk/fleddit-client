@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { updateLikes } from '../actions/postsActions'
 
 class PostCard extends Component {
 
@@ -15,7 +17,7 @@ class PostCard extends Component {
   handleClick = (event) => {
     event.preventDefault();
     let newLikes = this.state.likes + 1
-    this.setState({likes: newLikes})
+    this.setState({likes: newLikes}, () => this.props.updateLikes(this.props.targetPost.id, this.state.likes))
   }
 
   render() {
@@ -34,4 +36,12 @@ class PostCard extends Component {
   }
 }
 
-export default PostCard
+const mapDispatchToProps = dispatch => {
+  return {
+    updateLikes: (id, likes) => {
+      dispatch(updateLikes(id, likes))
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(PostCard)
