@@ -53,3 +53,7 @@ img {
 .comment-form form {
   text-align: left;
 }
+
+div.post-likes p, div.post-likes button {
+  text-align: center;
+}
