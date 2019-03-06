@@ -1,7 +1,9 @@
+const BASE_URL = "http://localhost:3005"
+
 export function fetchAllComments() {
   return (dispatch) => {
     dispatch({type: 'START_ADDING_COMMENTS'});
-    return fetch('https://fleddit-api.herokuapp.com/api/comments')
+    return fetch(`${BASE_URL}/api/comments`)
       .then(response => response.json())
       .then(comments => dispatch({type: 'ADD_ALL_COMMENTS', comments}));
   };
@@ -9,7 +11,7 @@ export function fetchAllComments() {
 
 export function createComment(comment) {
   return (dispatch) => {
-    return fetch('https://fleddit-api.herokuapp.com/api/comments', {
+    return fetch(`${BASE_URL}/api/comments`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
