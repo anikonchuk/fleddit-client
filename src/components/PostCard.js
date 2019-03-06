@@ -5,13 +5,7 @@ import { updateLikes } from '../actions/postsActions'
 class PostCard extends Component {
 
   state = {
-    likes: 0
-  }
-
-  componentDidMount() {
-    this.setState({
-      likes: this.props.targetPost.likes
-    })
+    likes: this.props.targetPost.likes
   }
 
   handleClick = (event) => {
