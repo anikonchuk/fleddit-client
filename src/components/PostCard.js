@@ -12,6 +12,12 @@ class PostCard extends Component {
     })
   }
 
+  handleClick = (event) => {
+    event.preventDefault();
+    let newLikes = this.state.likes + 1
+    this.setState({likes: newLikes})
+  }
+
   render() {
     return(
       <div className="post-card">
@@ -21,7 +27,7 @@ class PostCard extends Component {
         { this.props.targetPost.img_url ? <img src={this.props.targetPost.img_url} alt={this.props.targetPost.title}/> : null }
         <div className="post-likes">
           <p><em>This post has {this.state.likes} likes.</em></p>
-          <button className="btn btn-primary">Like this post!</button>
+          <button className="btn btn-primary" onClick={this.handleClick}>Like this post!</button>
         </div>
       </div>
     )
