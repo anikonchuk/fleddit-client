@@ -66,3 +66,11 @@ div.post-likes p, div.post-likes button {
   background: linear-gradient(90deg, rgba(15,47,232,0.5116421568627452) 0%, rgba(80,85,85,0.34077380952380953) 44%, rgba(67,60,241,0.48082983193277307) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f2fe8",endColorstr="#433cf1",GradientType=1);
 }
+
+.about-card {
+  width: 75%;
+  margin: auto;
+  -webkit-box-shadow: 28px 26px 37px -5px rgba(87,87,87,1);
+  -moz-box-shadow: 28px 26px 37px -5px rgba(87,87,87,1);
+  box-shadow: 28px 26px 37px -5px rgba(87,87,87,1);
+}
