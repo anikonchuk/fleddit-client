@@ -39,8 +39,9 @@ class PostForm extends Component {
           <input type="text" id="author" name="author" value={this.state.author} onChange={this.handleChange} required /><br/>
           <label htmlFor="content">Content</label><br/>
           <textarea id="content" name="content" value={this.state.content} onChange={this.handleChange} required ></textarea><br/>
-          <label htmlFor="img_url">Image URL</label><br/>
+          <label htmlFor="img_url">Image URL (optional)</label><br/>
           <input type="text" id="img_url" name="img_url" value={this.state.img_url} onChange={this.handleChange} /><br/>
+          <br/>
           <input type="submit" className="btn btn-primary"/>
         </form>
       </div>
