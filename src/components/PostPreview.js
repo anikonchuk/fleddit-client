@@ -6,7 +6,7 @@ const PostPreview = (props) => {
     <div className="post-preview">
       <h5><Link to={`/posts/${props.post.id}`}>{props.post.title}</Link></h5>
       <p>{props.post.author}</p>
-      <p><em>{props.post.likes} likes</em></p>
+      <p><em>{props.post.likes} {props.post.likes == 1 ? "like" : "likes"}</em></p>
     </div>
   )
 }

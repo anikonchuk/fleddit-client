@@ -31,7 +31,7 @@ class PostCard extends Component {
         <p>{this.props.targetPost.content}</p>
         { this.props.targetPost.img_url ? <img src={this.props.targetPost.img_url} alt={this.props.targetPost.title}/> : null }
         <div className="post-likes">
-          <p><em>This post has {this.state.likes} likes.</em></p>
+          <p><em>This post has {this.state.likes} {this.state.likes == 1 ? "like" : "likes"}</em></p>
           <button className="btn btn-primary" onClick={this.handleClick}>Like this post!</button>
         </div>
       </div>
