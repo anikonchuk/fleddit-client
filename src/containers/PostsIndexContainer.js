@@ -12,7 +12,7 @@ class PostsIndexContainer extends Component {
 
   displayPostPreviews = () => {
     let newPostOrder = this.props.posts.sort(function(postA, postB) {
-      return new Date(postA.created_at).getTime() - new Date(postB.created_at).getTime()
+      return new Date(postB.created_at).getTime() - new Date(postA.created_at).getTime()
     })
     return newPostOrder.map(post => <PostPreview key={post.id} post={post}/>)
   }
