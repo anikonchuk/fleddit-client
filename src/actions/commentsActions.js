@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3005"
+const BASE_URL = "https://fleddit-api.herokuapp.com"
 
 export function fetchAllComments() {
   return (dispatch) => {
